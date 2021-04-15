@@ -1,0 +1,10 @@
+{% extends "bases/layout.html" %}
+{% block body %}
+<form method="POST">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Save" class="btn btn-primary">
+</form>
+<p>
+    <a href="{{ get_obsolute_url_home }}"><button>Return To Products</button></a>
+</p>
+{% endblock %}

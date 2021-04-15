@@ -1,0 +1,13 @@
+{% extends "bases/layout.html" %}
+{% block body %}
+{% include "bases/navbar.html" %}
+
+<h1>PRODUCTS PAGE</h1>
+<ul>
+    <li>{{ obj.id }}</li>
+    <li>{{ obj.title }}</li>
+    <li>{{ obj.price }}</li>
+    <li>{{ obj.summary }}</li>
+    <li>{{ obj.featured }}</li>
+</ul>
+{% endblock %}

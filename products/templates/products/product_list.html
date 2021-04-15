@@ -1,0 +1,12 @@
+{% extends "bases/layout.html" %}
+
+{% block body %}
+<a href="{{ get_absolute_url_create }}"><button>Create</button></a>
+{% for item in sets %}
+    <p>{{item.id}}: <a href="{{ item.get_obsolute_url }}">{{ item.title }}</a>
+    Actions: <a href="{{ item.get_obsolute_url_update }}"><button>Update</button></a>
+    <a href="{{ item.get_obsolute_url_del }}"><button>Delete</button></a>
+    </p>
+{% endfor %}
+
+{% endblock %} 
